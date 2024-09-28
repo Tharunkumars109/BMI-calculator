@@ -1,0 +1,176 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* Form section */
+.form-section, .result-section {
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Headings */
+h2, h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Gender options styling */
+.gender-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.gender-btn {
+    background: #e0e0e0;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+.gender-btn:hover {
+    background: #d1d1d1;
+    transform: scale(1.05);
+}
+
+.gender-btn.active {
+    background: #3498db;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Calculate button */
+#calculateBtn {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+}
+
+#calculateBtn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Result section */
+.result-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #eee;
+}
+
+/* Gauge container */
+.gauge-container {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+/* Gauge styles */
+.gauge {
+    width: 100%;
+    height: 100%;
+}
+
+.gauge-background {
+    fill: #e0e0e0;
+}
+
+.gauge-fill {
+    transition: all 1s ease;
+}
+
+/* BMI result styling */
+.bmi-value {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+/* Add extra effects for animations */
+.fadeIn {
+    animation: fadeIn 1s ease;
+}
+
+.slideInLeft {
+    animation: slideInLeft 1s ease;
+}
+
+.slideInRight {
+    animation: slideInRight 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.bounceIn {
+    animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
